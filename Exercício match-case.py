@@ -28,6 +28,9 @@ match opc:
             case "a":
                 opc11 = int (input ("Escolha sua quantidade: "))
                 VP = 15 * opc11
+            case "b":
+                opc12 = int (input ("Escolha sua quantidade: "))
+                VP = 20 * opc12
 
     case "2":
         print(" a. Refrigerante - R$ 6.00")
@@ -36,25 +39,31 @@ match opc:
         opc2 = input("Escolha sua bebida: ")
 
         match opc2:
-            case " 2":
-                print(" 1. Refrigerante - R$ 6.00")
-                print(" 2. Suco Natural - R$10.00 ")
+            case "a":
+                opc21 = int (input ("Escolha sua quantidade: "))
+                VP = 6 * opc21
+            case "b":
+                opc22 = int (input ("Escolha sua quantidade: "))
+                VP = 10 * opc22
 
-    case " 3":
+    case "3":
         print(" 1. Açaí - R$ 25.00")
         print(" 2. Sorvete - R$18.00 ")
 
         opc3 = input("Escolha sua sobremesa:")
 
         match opc3:
-            case " 2":
-                print(" 1. Açaí - R$ 25.00")
-                print(" 2. Sorvete - R$18.00 ")
+            case "1":
+                opc31 = int(input("Escolha sua quantidade: "))
+                VP = 25 * opc31
+            case "2":
+                opc32 = int(input("Escolha sua quantidade: "))
+                VP = 18 * opc32      
 
-    case " 4":
+    case "4":
         print (" Até logo, volte sempre :) !")
 
-print (VP)
+print (f"Valor do pedido: R$ {VP} ")
 
 
 

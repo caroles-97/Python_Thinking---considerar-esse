@@ -26,10 +26,16 @@ print(f"Sua média é {media}")
 C = float(input("Digite a temperatura em Celsius: "))
 F = C * 1.8 +32
 print(f"A temperatura em {C} ºC é equivalente a {F} ºF")
-'''
 
 #Exercício 5
 P = float( input("Diga seu peso em kg: "))
 A = float(input("Diga sua altura em metros: "))
 IMC = P /A**2
 print(f"Seu IMC é {IMC}")
+'''
+#Algoritmo sequencial - exercício 10
+N = int(input("Quantos dias você trabalho neste mês? "))
+money = N * 80.0
+desc = money * 0.08
+money_final= money - desc
+print(f"Você trabalho {N} dias e ganhou R$ {money_final}, incluindo desconto do INSS de R$ {desc}")
