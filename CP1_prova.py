@@ -12,6 +12,7 @@ print ( " 1. Estudante")
 print ( " 2. Trabalhador")
 print ( " 3. Idoso")
 print ( " 4. Comum")
+print("\n")
 
 opc = input ("Escolha uma opção: ")
 variaveldecontrole = 0  #duplo teste para quando chegar no matchcase case_
