@@ -35,7 +35,23 @@ while cont <= 15:
 
     cont += 1
 print (f" A soma de todos os ímpares é {total} .")
+____________________________________________________
 
+Exercício: solicite vários números ao usuário (até que ele digite o número zero) e informe o somatório dos números digitados.
+
+A condição para sair do laço de repetição é quando o N == 0, portanto: 
+
+N = -1 
+total = 0
+cont = 1
+
+while N != 0:
+    N = int (input (f"Informe o {cont}º número: "))
+
+    total += N
+    cont += 1
+
+print (f"A soma de tdos os números é {total} .")
 
 
 
