@@ -1,0 +1,50 @@
+# 1. Preencha uma lista com 10 numeros aleatorios unicos (sorteados de 1 a 20), ou seja, sem elementos repetidos.
+# Para embaralhar 'shuffle()', precisamos importar a bibilioteca 'random'. Para sortear os elementos, usamos o metodo 'choice'
+
+import random #importa a biblioteca random para gerar numeros aleatorios
+
+lista=[] #criei lista zerada
+for i in range(10): #repetir 10x
+    n=random.randint(1,20)  #- gera um numero aleatorio entre 1 e 20
+    while n in lista:  # VERIFICA se o numero ja esta na lista, se estiver, gera outro numero
+        n=random.randint(1,20) #- gera um NOVO numero aleatorio entre 1 e 20
+    lista.append(n) #adicionar o numero sorteado na lista/ ARMAZENAR O NUMERO SORTEADO NA LISTA
+# Exibir lista com todos os itens armazenados
+print(f" Os 10 números aleatórios sorteados entre 1 a 20 são: {lista}")
+
+OU
+
+import random #importa a biblioteca random para gerar numeros aleatorios
+lista = random.sample(range(1, 21), 10) #gera uma lista com 10 numeros aleatorios unicos entre 1 e 20
+print(f" Os 10 números aleatórios sorteados entre 1 a 20 são: {lista}")
+
+#2 Preencha uma lista com 30 numeros aleatorios (sorteados de 1 a 50). A partir dessa lista, gere uma nova lista contendo apenas os números primos da lista. 
+
+import random #importa a biblioteca random para gerar numeros aleatorios
+lista = random.randint(range(1,51), 30) #gera uma lista com 30 numeros aleatorios entre 1 e 50
+
+# ?????????????????????????????????????????????????????????????????
+
+#3 Preencha uma lista com 30 numeros aleatorios (sorteados de 1 a 50). A seguir solicite um numero inteiro e multiplique todos os itens da lista por esse numero. 
+
+import random #importa a biblioteca random para gerar numeros aleatorios
+
+lista = []
+
+for i in range(30):
+    num = random.randint(1,50)
+    lista.append(num)       
+
+#gera uma lista com 30 numeros aleatorios entre 1 e 50
+
+n=int(input("Digite um nº inteiro: "))
+
+lista2 = [] #criamos nova lista para multiplicar com o nº informado
+
+for i in range(len(lista)):
+    num = lista[i]*n
+    lista2.append(num)
+
+print(f"Estes são os números sorteados de 1 a 50: {lista}")
+print(f"Estes são os números multiplicados pelo valor informado: {lista2}")
+
