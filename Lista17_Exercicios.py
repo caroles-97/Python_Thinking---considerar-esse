@@ -52,3 +52,34 @@ for i in range(len(lista)):
 print(f"Estes são os números sorteados de 1 a 50: {lista}")
 print(f"Estes são os números multiplicados pelo valor informado: {lista2}")
 
+
+
+# 4 Preencha uma lista com 10 itens e verifique se ela é um palíndrono, ou seja, se ela é igual quando lida da esquerda para a direita e da direita para a esquerda. 
+# Lista P = lista do palindromo
+
+P = []
+
+for i in range (5):
+    N = int(input("Informe um valor inteiro:"))
+
+    # Vamos criar uma posição de memória na última posição da lista
+    P.append(N)
+
+
+print (P)
+
+isPallindrome = True
+
+for left in range (int(len(P) / 2)):
+    right = len(P)-1-left
+    if P [right] != P [left]:
+        isPallindrome = False
+        break
+
+if isPallindrome:
+    print ("Palindromo")
+
+
+
+
+
