@@ -81,7 +81,7 @@ def validar_nota(nota):
         #neste caso, precisamos que a nota válida retorne ao usuário
     return nota 
 
-def media (nota1 , nota 2):
+def media (nota1 , nota2):
     media = (N1 + N2) / 2
     if media >= 6:
         print (f' Aprovado ! \n Sua média é {media}')
