@@ -38,7 +38,7 @@ def dados ():
     #Trabalharemos com lista chamada 'dado' em posição 0 vai receber a quantidade de nºx que cair. Logo vamos iniciar a lista na posição 0
     dado = [0,0,0,0,0,0]
 
-    #Dado vai rodar mil vezes:
+    #Dado vai rodar 1 milhão de vezes:
     for i in range (1000000):
         #Aqui gerei nº randomico de 1 a 6:
         x = random.randint (1, 6)
@@ -62,3 +62,33 @@ def dados ():
 dado = dados()
 for i in range (len(dado)):
     print(f"O número {i+1} apareceu {dado[i]} vezes ")
+
+
+###############################
+### RESOLUÇÃO ARTHUR:
+#Exercício 3 - aula 22: Jogo de dados que pode ser sorteado qualquer número entre 1 a 6. Fazer função que simule X de lançamentos de dados e mostre quantas vezes cada número foi sorteado
+
+#Vamos mexer com nº aleatórios, logo precisamos importar uma biblioteca e iniciar função.
+
+import random
+
+def dados (num):
+    #Trabalharemos com lista chamada 'dado' em posição 0 vai receber a quantidade de nºx que cair. Logo vamos iniciar a lista na posição 0
+    dado = [0,0,0,0,0,0]
+
+    #Dado vai rodar quantas vezes o usuário quiser:
+    for i in range (num):
+        #Aqui gerei nº randomico de 1 a 6:
+        x = random.randint (1, 6)
+
+        dado [x - 1] += 1
+
+    for i in range(len(dado)):
+       print(f"O número {i + 1} apareceu {dado[i]} vezes ")
+
+
+#Main - aqui vamos chamar a função dados (dentro da função já vai ter gerada a lista)
+
+n = int(input('Digite um número'))
+dados(n)
+
