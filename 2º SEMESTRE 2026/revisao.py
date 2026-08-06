@@ -6,7 +6,8 @@ for K in range (2):    #Repetir 2x
     idade = int(input("Digite sua idade: ")) #entrada
     sexo = input("Digite M para masculino e F para feminino: ")   #entrada
 
-    lista = [nome, idade, sexo] # criei um armário-filho que tem as 3 informações da entrada
-    lista_completa.append(lista) # Criado armário-pai com os armários-filhos
+    lista = [nome, idade, sexo] # criei um armário-filho (sublista) que tem as 3 informações da entrada
+    lista_completa.append(lista) # Criado armário-pai (LISTA / LISTA COMPLETA) com os armários-filhos
+    #APPEND. QUEM CONECTA PARA LISTA_COMPLETA
 
 print (lista_completa) #mostrar o armário-pai
