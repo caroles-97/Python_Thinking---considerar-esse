@@ -1,4 +1,4 @@
-For - estrutura de repetição 
+****For - estrutura de repetição*** 
 
 1º SEMESTRE 2026 : FOR, LISTAS [], APPEND. 
 
@@ -25,5 +25,85 @@ print(lista_sexo)
 
 LISTA COM SUBLISTA COM TODAS AS INFORMAÇÕES DO USUÁRIO: 
 
-print (Meu nome é {nome}, tenho {idade} e sou do sexo {sexo})
+==================BASICAMENTE O PYTHON TEM 4 ESTRUTURAS: ====================
+- LISTA
+- TUPLA
+- DICIONÁRIO
+- PANDAS (TABELAS)
+
+=========*** WHILE, APPEND E LISTA DENTRO DE LISTA ***===========  
+*****************SITE PYTHON TUTOR depura a lógica do código ******************
+
+dados = [[],[],[]]    -variavel chamada dados que tem uma LISTONA que tem sublistas vazias
+contador = 0   **para limitar a quantidade de vezes que eu solicito ao usuario. Iniciarei como zero e vou repetir até a regra do while, ou seja, zero (1ª vez) e um (2ª vez repetição)**
+
+while contador <2 :   ----- CONTADOR MENOR QUE 2
+    print (f"\n Dados da (contador +1)ª pessoa:" )
+
+    nome = input ("Digite o nome:")
+    dados[0].append(nome)   ---- quando estamos colocando [0], estamos pegando o 1º valor do dados
+
+    idade = int (input("Digite a idade:"))
+    dados[1].append(idade) ---- estamos mandando o dado para a lista de dados no índice 1
+
+    sexo=input("Digite o sexo da pessoa (M/F):").lower()
+    dados[2].append(sexo)  ---- estamos mandando o dado para a lista de dados no índice 2
+
+    contador += 1 ------------------limitando a quantidade de vezes que vamos executar
+
+print (dados)
+
+
+................................................
+
+Crie um algoritmo para solicitar:
+1 - marca de carro, 2-  versão do carro, 3- ano, 4 - cor, 5-IPVA pago. 
+
+Solicite 4 dados para cada item. Deixa cada informação em uma sublista. 
+
+Utiliza while ou for para solicitar as informações repetidas. 
+
+
+**Abordagem 1 - resposta fica fragmentada**
+lista = [[], [], [], [], []]    -- crio 5 sublistas para as informações
+contador = 0 
+
+while contador <=3 :     -- contando o 0 como nº inicial, vou ir até o número 3
+    print (f"\n Dados do seu (contador +  1)º carro:")
+
+    marca = input ("Digite a marca do seu carro:")
+    versao = int (input("Digite a versão do carro:"))
+    ano = int (input("Digite o ano do carro:"))
+    cor = input ("Digite a cor do carro:")
+    ipva = input ("IPVA foi pago? (S/N):")
+    
+
+    lista[0].append(marca) --- armazenar a marca na listona
+    lista[1].append(versao)    ---- armazena a versão na listona
+    lista[2].append(ano)    ----- armazena o ano do carro na listona
+    lista[3].append(cor)    ---- armazena a cor na listona
+    lista[4].append(ipva)   ---- armazena o ipva na listona
+
+    contador += 1
+
+print(lista)
+
+**Abordagem 2 - com esse cód a resposta fica numa única sublista - gostei mais**
+lista = [[], [], [], [], []]    -- crio 5 sublistas para as informações
+contador = 0 
+
+while contador < 4:     -- contando o 0 como nº inicial, vou ir até o número 3
+    print (f"\n Dados do seu (contador +  1)º carro:")
+
+    marca = input ("Digite a marca do seu carro:")
+    versao = int (input("Digite a versão do carro:"))
+    ano = int (input("Digite o ano do carro:"))
+    cor = input ("Digite a cor do carro:")
+    ipva = input ("IPVA foi pago? (S/N):")
+    
+    dados = [marca, versao, ano, cor, ipva]
+    lista.append(dados)
+    contador += 1
+
+print(lista)
 

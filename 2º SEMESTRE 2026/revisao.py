@@ -11,3 +11,5 @@ for K in range (2):    #Repetir 2x
     #APPEND. QUEM CONECTA PARA LISTA_COMPLETA
 
 print (lista_completa) #mostrar o armário-pai
+
+
