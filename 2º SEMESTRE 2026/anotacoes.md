@@ -25,11 +25,11 @@ print(lista_sexo)
 
 LISTA COM SUBLISTA COM TODAS AS INFORMAÇÕES DO USUÁRIO: 
 
-==================BASICAMENTE O PYTHON TEM 4 ESTRUTURAS: ====================
-- LISTA
-- TUPLA
-- DICIONÁRIO
-- PANDAS (TABELAS)
+****==================BASICAMENTE O PYTHON TEM 4 ESTRUTURAS: ====================****
+- LISTA []
+- TUPLA ()
+- DICIONÁRIO {}
+- **PANDAS (TABELAS)**
 
 =========*** WHILE, APPEND E LISTA DENTRO DE LISTA ***===========  
 *****************SITE PYTHON TUTOR depura a lógica do código ******************
@@ -56,13 +56,9 @@ print (dados)
 
 ................................................
 
-Crie um algoritmo para solicitar:
-1 - marca de carro, 2-  versão do carro, 3- ano, 4 - cor, 5-IPVA pago. 
-
-Solicite 4 dados para cada item. Deixa cada informação em uma sublista. 
+*Crie um algoritmo para solicitar:* 1 - marca de carro, 2-  versão do carro, 3- ano, 4 - cor, 5-IPVA pago. Solicite 4 dados para cada item. Deixa cada informação em uma sublista. 
 
 Utiliza while ou for para solicitar as informações repetidas. 
-
 
 **Abordagem 1 - resposta fica fragmentada**
 lista = [[], [], [], [], []]    -- crio 5 sublistas para as informações
@@ -107,3 +103,52 @@ while contador < 4:     -- contando o 0 como nº inicial, vou ir até o número 
 
 print(lista)
 
+**DIFERENÇA ENTRE [] E (): as listas são mutáveis (você pode alterar, adicionar ou remover itens), enquanto as tuplas são imutáveis (não podem ser modificadas após a criação). Além disso, as listas usam colchetes [] e as tuplas usam parênteses ()**
+
+
+*****DICIONÁRIO {} ou dict ***
+
+**Contém várias informações dentro da variável. Ele é mais inteligente que a lista, tupla.*
+*Contem uma chave que assemelha ao nome da coluna no excel. COLUNA = Chave.*
+Os itens de cada chave podem ser: 
+                Em lista []
+                Em tupla ()
+                Em dicionário {}
+
+Exemplo 1: 
+
+dicionario = { 
+    'time': ['A', 'B', 'C'],
+    'vitorias': ['10', '12', '8'],
+    'Estado': ['RJ', 'CE', 'SP'],}
+print (dicionario)
+
+import pandas as pd
+dados = pd.DataFrame(dicionario)
+dado
+
+Exemplo 2:
+produto = dict(nome="Notebook", preco=300)
+print(produto["nome"])
+
+Exemplo 3:
+cliente = {}
+cliente['nome'] = input ('Nome:')
+cliente['idade] = input ('Idade:')
+print(f"Nome: {cliente['nome']}")
+
+*Para corrigir o dado já registrado da idade dentro do dicionario:*
+cliente['idade'] = 37 #aqui vai a idade
+cliente.update({'tel': '56554'})  # *.update - adicionando nova variável*
+print(cliente)
+
+***PARA DELETAR VARIÁVEL NO DICIONÁRIO - del  ou  pop**
+del *nome do dicionario com sua chave*
+
+del cliente['idade']
+print(cliente)
+
+***Função útil em programação dinâmica - POP**
+pop: retira deleta de forma inteligente as variáveis da lista.
+
+**DICIONARIO e IF**  if nomedodicionario ["variaveldodicionario"]
