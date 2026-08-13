@@ -124,7 +124,7 @@ dicionario = {
 print (dicionario)
 
 import pandas as pd
-dados = pd.DataFrame(dicionario)
+dados = pd.DataFrame(dicionario)  *#   . vai entrar uma função*
 dado
 
 Exemplo 2:
