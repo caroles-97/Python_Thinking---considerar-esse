@@ -152,3 +152,49 @@ print(cliente)
 pop: retira deleta de forma inteligente as variáveis da lista.
 
 **DICIONARIO e IF**  if nomedodicionario ["variaveldodicionario"]
+
+*DICIONARIO E ESTRUTURA DE REPETIÇÃO (FOR, WHILE) - ESTRUTURA DO DICT: {CHAVE:VALOR, CHAVE:VALOR}*
+
+estoque = {"maça": 10, "banana": 5, "laranja": 8}
+
+for fruta in estoque:       # compreende somente as variáveis dentro das "", é diferente da lista []
+    print(fruta)
+
+OU
+
+for fruta, qtd in estoque.items():      # qtd será para o VALOR
+    print(f"(fruta): (qt) unidades")
+
+
+OU 
+
+*DICIONÁRIO ANINHADO (FOR DUPLO) - ESTRUTURA DE REPETIÇÃO DENTRO DE REPETIÇÃO*
+
+alunos = {
+    "Ana": {"n1": 8, "n2": 7},   # ÍNDICE 0
+    "Bruno": {"n1": 5, "n2": 6}     # índice 1
+}
+
+for nome, notas in alunos.items():      # ele compreende o nome como CHAVE e notas como VALOR
+    for prova, valor in notas.items():      #em ambos precisa usar a função .items()
+        print(nome, prova, valor)
+
+
+*for enumerated items*
+for i, (nome, notas) in enumerate(alunos.items()):
+    print (i, nome, notas)  # i de índice (se é zero, um etc), nome
+
+*DICT E WHILE*
+
+carrinho = {}   #DICT está vazio. Nome do DICT: carrinho
+produto = ""    # Nome da chave:: produto
+
+while produto != "sair":
+    produto = input("Produto: ")
+    if produto == "sair":
+        break
+    preco = float(input("Preço: "))
+    carrinho[produto] = preco
+
+print (carrinho)
+
