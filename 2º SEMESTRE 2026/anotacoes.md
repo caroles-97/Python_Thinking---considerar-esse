@@ -198,3 +198,20 @@ while produto != "sair":
 
 print (carrinho)
 
+-------------------------------------------------
+
+*************Estrutura com 'class' em Python *************
+
+Uma classe é um modelo para criar objetos que possuem características (atributos) e comportamentos (métodos). Ela faz parte do paradigma da Programação Orientada a Objetos.
+
+*Uma class é um molde (modelo) para criar objetos* - Criar um molde/ receita em comum para fazer bolo
+
+__init__ - para criar o self
+self - para criar variáveis
+
+**ESTRUTURA 'CLASS'**
+
+class Objeto:
+  def __init__(self, nomevariavel):  PRECISA DECLARAR A VARIÁVEL SEMPRE APOS O INIT
+    self.nomevariavel = nomevariavel
+
