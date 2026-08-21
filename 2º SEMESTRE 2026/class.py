@@ -66,3 +66,71 @@ class Retangulo:
 
 r1 = Retangulo (float(input("Base: ")), float(input("Altura: ")))
 print(r1.calcular())
+
+
+-----
+
+***ESTRUTURAÇÃO DE REPETIÇÃO FOR****
+
+class Pessoa: 
+  def __init__(self, nome, idade):
+    self.nome = nome
+    self.idade = idade
+
+  def apresentar(self):
+    return f"Olá, meu nome é {self.nome} e tenho {self.idade} anos"
+
+# #Criando objeto com o código acima (somente, não é aplicável para os códigos a seguir)
+# p1 = Pessoa ("Ana", 35)
+# print(p1.apresentar())
+
+#Criando lista de objetos. 
+# Criar variavel pessoas para a lista
+pessoas = [
+    Pessoa("Laura", 25),
+    Pessoa("Roberto", 26),
+    Pessoa("Ana", 20)
+    ]
+
+#Usar estrutura de repetição no formato lista
+# Para cada p, chamar a função apresentar (estrutura do texto)
+for p in pessoas:
+  print(p.apresentar())
+
+-----
+
+class Imc:
+  def __init__(self, nome, peso, altura):
+    self.nome = nome
+    self.peso = peso
+    self.altura = altura
+
+  #Criar método
+  def apresentar(self):
+    return f"Meu nome é {self.nome}, peso {self.peso} e altura(metros) {self.altura}. Logo, eu tenho o IMC de {self.peso/self.altura**2} "
+
+#Criando objeto - onde coloco input
+# pessoa = Imc(input("Nome: "), float(input("Peso: ")), float(input("Altura: ")))
+
+pessoa = [
+    Imc(input("Nome:"), float(input("Peso: ")), float(input("Altura: "))),
+    Imc(input("Nome:"), float(input("Peso: ")), float(input("Altura: "))),
+    Imc(input("Nome:"), float(input("Peso: ")), float(input("Altura: "))),
+    Imc(input("Nome:"), float(input("Peso: ")), float(input("Altura: "))),
+    Imc(input("Nome:"), float(input("Peso: ")), float(input("Altura: ")))
+]
+
+
+#Criando lista, chamando a class do meu objeto QUANDO JÁ TENHO OS DADOS
+# pessoa = [
+#     Imc("Laura", 60, 1.50 ),
+#     Imc("Roberto", 90, 1.70),
+#     Imc("Ana", 64, 1.61),
+#     Imc("Raul", 64, 1.65),
+#     Imc("Maria", 80, 1.60)
+#     ]
+
+
+# Para cada p, chamar a função apresentar (estrutura do texto)
+for p in pessoa:
+  print(p.apresentar())
