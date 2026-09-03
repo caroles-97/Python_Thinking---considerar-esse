@@ -15,24 +15,7 @@ class Carro:
     def apresentar(self):
         return f"Meu carro é da marca {self.marca}, do modelo {self.modelo}, tipo de carro {self.tipo} da cor {self.cor} e do ano {self.ano}"
 
-# lista_carro = []
-
-# while True: 
-#     marca = input("Marca:")
-
-#     if marca == "nenhum":
-#         break
-
-#     modelo =  input("Modelo:")
-#     tipo = input("Tipo de carro:")
-#     cor = input("Cor do carro:")
-#     ano = input(float("Ano do carro:"))
-
-#     objeto = Carro(marca, modelo, tipo, cor, ano )
-#     lista_carro.append(objeto)
-
-
-# #Criando objeto - vou colocar input
+#Criando objeto - vou colocar input
 carro1 = (input("Marca:"), input("Modelo:"), input("Tipo de carro:"), input("Cor do carro:"), int(input("Ano do carro:"))),
 carro2 = (input("Marca:"), input("Modelo:"), input("Tipo de carro:"), input("Cor do carro:"), int(input("Ano do carro:"))),
 carro3 = (input("Marca:"), input("Modelo:"), input("Tipo de carro:"), input("Cor do carro:"), int(input("Ano do carro:")))
@@ -54,7 +37,8 @@ for i in lista_carro: #Um objeto por vez - estamos percorrendo a lista dos objet
     dados.append (linha)    # guarda na lista. Dados recebendo info do dict {linha}
 
 import pandas as pd
-print(pd.DataFrame(dados))  #Transformar o dict 'dados' em DataFrame/ Pandas
+dataframe=pd.DataFrame(dados)
+print(dataframe)  #Transformar o dict 'dados' em DataFrame/ Pandas
 
         
         
