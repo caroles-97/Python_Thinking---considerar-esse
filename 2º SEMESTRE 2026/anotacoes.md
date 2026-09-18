@@ -215,3 +215,104 @@ class Objeto:
   def __init__(self, nomevariavel):  PRECISA DECLARAR A VARIÁVEL SEMPRE APOS O INIT
     self.nomevariavel = nomevariavel
 
+------------------------------------------------------- 
+****17/9/26 - FUNÇÃO EM 1 LINHA SOMENTE + ITERROWS + ITERTUPLES + .apply(lambda)****
+-----------------------------------------
+*Função em 1 linha*
+df = pd.DataFrame({
+    "pedido":    [1001, 1002, 1003, 1004, 1005, 1006],
+    "produto":   ["Notebook", "Mouse", "Monitor",
+                  "Teclado", "Notebook", "Webcam"],
+    "categoria": ["Informatica", "Acessorio",
+                  "Informatica", "Acessorio",
+                  "Informatica", "Acessorio"],
+    "regiao":    ["SP", "RJ", "SP", "MG", "RJ", "SP"],
+    "preco":     [4200.0, 89.9, 1350.0,
+                  210.0, 3990.0, 149.9],
+    "qtd":       [2, 10, 3, 5, 1, 4],
+})
+
+df["total"] = df["preco"] * df["qtd"]
+
+#Ex.1
+porte =[]
+for t in df["total"]:
+  porte.append("Grande" if t>1000 else "Pequeno")
+
+  ----------------------------------
+*ITERROWS*
+
+import pandas as pd *iterrows é do PANDAS*
+
+df = pd.DataFrame({
+    "pedido":    [1001, 1002, 1003, 1004, 1005, 1006],
+    "produto":   ["Notebook", "Mouse", "Monitor",
+                  "Teclado", "Notebook", "Webcam"],
+    "categoria": ["Informatica", "Acessorio",
+                  "Informatica", "Acessorio",
+                  "Informatica", "Acessorio"],
+    "regiao":    ["SP", "RJ", "SP", "MG", "RJ", "SP"],
+    "preco":     [4200.0, 89.9, 1350.0,
+                  210.0, 3990.0, 149.9],
+    "qtd":       [2, 10, 3, 5, 1, 4],
+})
+
+df["total"] = df["preco"] * df["qtd"]
+
+for indice, linha in df.iterrows():
+  print(indice, linha["produto"], linha["regiao"], linha["total"])
+
+  --------------------------------------
+*ITERTUPLES*
+df = pd.DataFrame({
+    "pedido":    [1001, 1002, 1003, 1004, 1005, 1006],
+    "produto":   ["Notebook", "Mouse", "Monitor",
+                  "Teclado", "Notebook", "Webcam"],
+    "categoria": ["Informatica", "Acessorio",
+                  "Informatica", "Acessorio",
+                  "Informatica", "Acessorio"],
+    "regiao":    ["SP", "RJ", "SP", "MG", "RJ", "SP"],
+    "preco":     [4200.0, 89.9, 1350.0,
+                  210.0, 3990.0, 149.9],
+    "qtd":       [2, 10, 3, 5, 1, 4],
+})
+
+df["total"] = df["preco"] * df["qtd"]
+
+for linha in df.itertuples():
+  print(linha.Index, linha.produto, linha.total) 
+
+  ------------
+
+*.APPLY(LAMBDA)*~
+
+**.apply = função para aplicar a lógica do LAMBDA**
+~~~~lambda = permite criar lógica~~~~
+e depois criamos a lógica
+
+#Ex. 4
+
+df = pd.DataFrame({
+    "pedido":    [1001, 1002, 1003, 1004, 1005, 1006],
+    "produto":   ["Notebook", "Mouse", "Monitor",
+                  "Teclado", "Notebook", "Webcam"],
+    "categoria": ["Informatica", "Acessorio",
+                  "Informatica", "Acessorio",
+                  "Informatica", "Acessorio"],
+    "regiao":    ["SP", "RJ", "SP", "MG", "RJ", "SP"],
+    "preco":     [4200.0, 89.9, 1350.0,
+                  210.0, 3990.0, 149.9],
+    "qtd":       [2, 10, 3, 5, 1, 4],
+})
+
+df["total"] = df["preco"] * df["qtd"]
+
+df["total"].apply(lambda x: x * 0.1 if x > 1000 else  0)
+# nomeDoDataFrame ["NomeColuna"].apply
+# apply = "def sem nome". Ajuda a aplicar o resto no df inteiro
+
+# lambda é de dentro do pandas - ajuda a aplicar lógica. Criação de variáveis ilimitadas
+# lambda nomeVariavel : AÇÃO/LÓGICA DE CONDIÇÃO NUMA LINHA.
+
+# def nomedafunção (x):
+#   return ........
