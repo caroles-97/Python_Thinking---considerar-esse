@@ -307,7 +307,9 @@ df = pd.DataFrame({
 
 df["total"] = df["preco"] * df["qtd"]
 
-df["total"].apply(lambda x: x * 0.1 if x > 1000 else  0)
+df["Desconto"]= df["total"].apply(lambda x: x * 0.1 if x > 1000 else  0)
+df
+
 # nomeDoDataFrame ["NomeColuna"].apply
 # apply = "def sem nome". Ajuda a aplicar o resto no df inteiro
 
